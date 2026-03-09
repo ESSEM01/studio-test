@@ -1,0 +1,84 @@
+/* ─── Reset & Base ────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #0a0a0a;
+  color: #f5f0e8;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ─── Selection ───────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(212, 168, 83, 0.3);
+  color: #f5f0e8;
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 168, 83, 0.3);
+  border-radius: 3px;
+}
+
+/* ─── Inputs ──────────────────────────────────────────────────────────── */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(245, 240, 232, 0.2);
+}
+
+/* ─── Animations ──────────────────────────────────────────────────────── */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.06;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+
+/* ─── Responsive Nav ──────────────────────────────────────────────────── */
+.desktop-nav {
+  display: flex;
+}
+.mobile-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-toggle {
+    display: block !important;
+  }
+}
