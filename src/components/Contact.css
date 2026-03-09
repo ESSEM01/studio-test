@@ -1,0 +1,38 @@
+/* Stili per il componente Contact */
+
+.form-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(245, 240, 232, 0.4);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #F5F0E8;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: rgba(212, 168, 83, 0.4);
+}
+
+.form-input:blur {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.contact-section {
+  padding: 120px clamp(24px, 5vw, 80px) 80px;
+  position: relative;
+}

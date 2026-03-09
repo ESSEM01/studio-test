@@ -1,0 +1,8 @@
+/* Stili per il componente App */
+
+.app {
+  background: #0A0A0A;
+  color: #F5F0E8;
+  min-height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+}
