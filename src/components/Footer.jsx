@@ -1,3 +1,4 @@
+import { Volume2 } from "lucide-react";
 import "./Footer.css";
 
 export default function Footer() {
@@ -10,7 +11,9 @@ export default function Footer() {
         </span>
       </div>
 
-      <p className="footer-text">Testo del footer</p>
+      <p className="footer-text">
+        &copy; {new Date().getFullYear()} AuraStudio. Tutti i diritti riservati.
+      </p>
     </footer>
   );
 }
