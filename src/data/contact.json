@@ -1,0 +1,6 @@
+[
+  { "icon": "Mail",      "text": "info@aurastudio.it" },
+  { "icon": "Phone",     "text": "+39 06 1234 5678" },
+  { "icon": "MapPin",    "text": "Via della Musica 42, Roma" },
+  { "icon": "Instagram", "text": "@aura.studio" }
+]

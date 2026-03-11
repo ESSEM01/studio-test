@@ -1,0 +1,8 @@
+[
+  { "title": "Eclisse Notturna", "artist": "Marco Veil",  "category": "Mix & Master", "image": "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)" },
+  { "title": "Cenere",           "artist": "Luna Rossa",  "category": "Produzione",   "image": "linear-gradient(135deg, #2d1b2e 0%, #4a1942 50%, #1a1a2e 100%)" },
+  { "title": "Frequenze",        "artist": "DJ Kosmo",    "category": "Mastering",    "image": "linear-gradient(135deg, #0a3d2e 0%, #1a5c3a 50%, #0d2818 100%)" },
+  { "title": "Senza Filtro",     "artist": "Ade & Simo",  "category": "Recording",    "image": "linear-gradient(135deg, #3d2b1f 0%, #5c3a1a 50%, #2d1b0f 100%)" },
+  { "title": "Parallelo",        "artist": "NKT",         "category": "Beat + Mix",   "image": "linear-gradient(135deg, #1a1a3e 0%, #2a1a4e 50%, #0f0f2e 100%)" },
+  { "title": "Onde Corte",       "artist": "Sara K.",     "category": "Podcast",      "image": "linear-gradient(135deg, #2e2e1a 0%, #4e4a1a 50%, #1e1e0a 100%)" }
+]

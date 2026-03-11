@@ -1,0 +1,5 @@
+[
+  { "label": "Nome",     "placeholder": "Il tuo nome",                     "type": "text" },
+  { "label": "Email",    "placeholder": "La tua email",                    "type": "email" },
+  { "label": "Servizio", "placeholder": "Recording, Mix, Master, Beat...", "type": "text" }
+]

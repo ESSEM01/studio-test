@@ -1,0 +1,8 @@
+[
+  { "id": "home",         "label": "Home" },
+  { "id": "services",     "label": "Servizi" },
+  { "id": "portfolio",    "label": "Portfolio" },
+  { "id": "studio",       "label": "Lo Studio" },
+  { "id": "testimonials", "label": "Recensioni" },
+  { "id": "contact",      "label": "Contatti" }
+]

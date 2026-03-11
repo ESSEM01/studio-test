@@ -1,103 +1,85 @@
-import { useMemo } from "react";
 import Reveal from "./Reveal";
 import { EQUIPMENT } from "../data/content";
+import STATS from "../data/stats.json";
 
-function ConsoleIllustration() {
-  const faders = useMemo(
-    () => Array.from({ length: 48 }, () => ({ h: 20 + Math.random() * 20, o: 0.1 + Math.random() * 0.2 })),
-    []
-  );
+const WAVE_BARS = Array.from({ length: 56 }, (_, i) =>
+  8 + Math.abs(Math.sin(i * 0.38)) * 36 + Math.abs(Math.sin(i * 0.75 + 1)) * 18
+);
 
+function StudioPanel() {
   return (
-    <div style={{ position: "relative", aspectRatio: "4/5", borderRadius: 2, overflow: "hidden" }}>
-      {/* Background */}
+    <div
+      style={{
+        background: "linear-gradient(135deg, #1a1510 0%, #211a0f 100%)",
+        borderRadius: 4,
+        border: "1px solid rgba(212,168,83,0.12)",
+        padding: "44px 40px",
+        display: "flex",
+        flexDirection: "column",
+        gap: 40,
+      }}
+    >
+      {/* Stats grid */}
       <div
         style={{
-          position: "absolute",
-          inset: 0,
-          background: "linear-gradient(135deg, #1a1510 0%, #2a1f15 30%, #1a1510 60%, #0f0c08 100%)",
-        }}
-      />
-
-      {/* Console faders */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "15%",
-          left: "10%",
-          right: "10%",
-          height: "35%",
-          background: "linear-gradient(180deg, rgba(212,168,83,0.08) 0%, rgba(212,168,83,0.02) 100%)",
-          borderRadius: "4px 4px 0 0",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          overflow: "hidden",
+          borderRadius: 2,
           border: "1px solid rgba(212,168,83,0.1)",
-          borderBottom: "none",
-          display: "flex",
-          flexWrap: "wrap",
-          padding: 12,
-          gap: 4,
-          alignContent: "start",
         }}
       >
-        {faders.map((f, i) => (
+        {STATS.map((s, i) => (
           <div
             key={i}
             style={{
-              width: 6,
-              height: f.h,
-              borderRadius: 1,
-              background: `rgba(212,168,83,${f.o})`,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* VU meters */}
-      <div
-        style={{
-          position: "absolute",
-          top: "20%",
-          left: "50%",
-          transform: "translateX(-50%)",
-          display: "flex",
-          gap: 24,
-        }}
-      >
-        {[0.7, 0.85].map((fill, i) => (
-          <div
-            key={i}
-            style={{
-              width: 80,
-              height: 80,
-              borderRadius: "50%",
-              border: "1px solid rgba(212,168,83,0.2)",
-              background: "rgba(0,0,0,0.3)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              background: "#0f0c08",
+              padding: "28px 24px",
+              borderRight: i % 2 === 0 ? "1px solid rgba(212,168,83,0.1)" : "none",
+              borderBottom: i < 2 ? "1px solid rgba(212,168,83,0.1)" : "none",
             }}
           >
             <div
               style={{
-                width: 2,
-                height: 30,
-                background: "#D4A853",
-                transformOrigin: "bottom",
-                transform: `rotate(${-45 + fill * 90}deg)`,
-                borderRadius: 1,
+                fontFamily: "'Playfair Display', serif",
+                fontSize: 38,
+                fontWeight: 700,
+                color: "#D4A853",
+                lineHeight: 1,
+                marginBottom: 8,
               }}
-            />
+            >
+              {s.value}
+            </div>
+            <div
+              style={{
+                fontSize: 11,
+                fontWeight: 500,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                color: "rgba(245,240,232,0.35)",
+              }}
+            >
+              {s.label}
+            </div>
           </div>
         ))}
       </div>
 
-      {/* Bottom fade */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: "linear-gradient(180deg, transparent 60%, rgba(10,10,10,0.5) 100%)",
-        }}
-      />
+      {/* Waveform decoration */}
+      <div style={{ display: "flex", alignItems: "center", gap: 2, height: 64 }}>
+        {WAVE_BARS.map((h, i) => (
+          <div
+            key={i}
+            style={{
+              flex: 1,
+              height: h,
+              borderRadius: 1,
+              background: `linear-gradient(180deg, rgba(212,168,83,${0.5 + Math.abs(Math.sin(i * 0.38)) * 0.4}) 0%, rgba(212,168,83,0.08) 100%)`,
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 }
@@ -199,9 +181,9 @@ export default function Studio() {
           ))}
         </div>
 
-        {/* Right: illustration */}
+        {/* Right: studio panel */}
         <Reveal delay={0.2}>
-          <ConsoleIllustration />
+          <StudioPanel />
         </Reveal>
       </div>
     </section>

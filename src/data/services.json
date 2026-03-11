@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "Mic",
+    "title": "Recording Session",
+    "description": "Sessioni di registrazione professionali in ambienti trattati acusticamente. Vocali, strumenti acustici ed elettrici, ensemble."
+  },
+  {
+    "icon": "Music",
+    "title": "Beatmaking",
+    "description": "Produzione musicale originale su misura. Trap, hip-hop, R&B, pop, elettronica e qualsiasi genere tu abbia in mente."
+  },
+  {
+    "icon": "Sliders",
+    "title": "Mixing",
+    "description": "Mixaggio professionale multi-traccia. Bilanciamento, EQ, compressione, effetti e automazioni per un suono coeso e potente."
+  },
+  {
+    "icon": "Disc3",
+    "title": "Mastering",
+    "description": "Mastering stereo e stem. Loudness competitivo, coerenza timbrica e preparazione per tutte le piattaforme di distribuzione."
+  },
+  {
+    "icon": "AudioWaveform",
+    "title": "Sound Design",
+    "description": "Creazione di suoni unici, sintesi, foley e post-produzione audio per video, podcast, film e contenuti multimediali."
+  },
+  {
+    "icon": "Headphones",
+    "title": "Podcast & Voice Over",
+    "description": "Registrazione, editing e post-produzione per podcast, audiolibri, doppiaggi e voice-over professionali."
+  }
+]
